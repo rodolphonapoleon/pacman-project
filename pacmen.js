@@ -1,4 +1,5 @@
-var pos = 0;
+let pos = 0;
+let movepacman;
 const pacArray = [
     ['./images/PacMan1.png', './images/PacMan2.png'],
     ['./images/PacMan3.png', './images/PacMan4.png']
@@ -38,6 +39,10 @@ function makePac() {
 }
 
 function update() {
+    if (!pacMen.length) {
+       return; 
+    }
+    document.getElementById('btn').disabled = true;
     pos = (pos + 1) % 2;
     //loop over pacmen array and move each one and move image in DOM
     pacMen.forEach((item) => {
@@ -53,7 +58,7 @@ function update() {
         item.newimg.style.left = item.position.x;
         item.newimg.style.top = item.position.y;
     })
-    setTimeout(update, 100);
+    movepacman = setTimeout(update, 100);
 }
 
 // Check Pacman direction
@@ -78,4 +83,12 @@ function makeOne() {
 
 function removeLastOne() {
     pacMen.pop().newimg.remove();  // remove the last Pacman
+}
+
+function resetGame() {
+    pacMen.forEach(element => {
+    element.newimg.remove();  
+    });
+    clearTimeout(movepacman);
+    document.getElementById('btn').disabled = false;
 }
