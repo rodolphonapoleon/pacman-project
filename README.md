@@ -10,17 +10,14 @@ The idea is to create as many pacmen as we want by pressing a button. Each pacma
 
 ## Getting Started
 
-### Dependencies
-
-* All recent browsers will run the HTML file
-* Working on mobile devices
-
 ### Installing
 
+* Fork the repo
+* Clone it to your local machine
+
+### Executing application
+
 * Make sure all files are in the same directory
-
-### Executing program
-
 * Open the comand line 
 * Go to the directory whe the files are located
 * and simply open the html file with the command `open` for mac users 
