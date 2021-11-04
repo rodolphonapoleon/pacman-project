@@ -2,12 +2,25 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: cadetblue;
+    background-color: #067ead;
 }
 
-.button {
-    /* outline: 3px dotted black; */
-    margin: 10px;
+.header {
+    margin-top: 60px;   
+}
+
+button {
+    background-color: #1a2846;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3a3e47;
+    cursor: pointer;
 }
 
 .main-window {
@@ -22,10 +35,8 @@ body {
 .game-window {
     width: 600px;
     height: 600px;
-    /* outline: 3px dotted black; */
-    margin: 20px;
     position: relative;
-    margin: 40px;
+    margin: 60px;
     display: inline-block;
     background-color: white;
    }
